@@ -1,0 +1,8 @@
+node_modules/
+*.zip
+*.docx
+*.jpg
+.DS_Store
+.idea/
+Week01 Lab/
+Week02 Lab/
