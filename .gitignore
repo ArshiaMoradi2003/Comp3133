@@ -1,8 +1,8 @@
 node_modules/
+Lab01_101490287_COMP3133/
+package.json
+package-lock.json
 *.zip
 *.docx
 *.jpg
-.DS_Store
 .idea/
-Week01 Lab/
-Week02 Lab/
