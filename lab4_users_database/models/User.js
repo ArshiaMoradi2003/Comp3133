@@ -1,0 +1,38 @@
+const mongoose = require("mongoose");
+
+const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true,
+        minlength: 4,
+        maxlength: 100
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        match: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    },
+    city: {
+        type: String,
+        required: true,
+        match: /^[A-Za-z ]+$/
+    },
+    website: {
+        type: String,
+        required: true,
+        match: /^(http|https):\/\/[^ "]+$/
+    },
+    zip: {
+        type: String,
+        required: true,
+        match: /^\d{5}-\d{4}$/
+    },
+    phone: {
+        type: String,
+        required: true,
+        match: /^1-\d{3}-\d{3}-\d{4}$/
+    }
+});
+
+module.exports = mongoose.model("User", userSchema);
