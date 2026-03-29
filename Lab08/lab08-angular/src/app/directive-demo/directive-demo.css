@@ -1,0 +1,92 @@
+.directive-container {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h2 { color: #333; border-bottom: 2px solid #9c27b0; padding-bottom: 8px; }
+h3 { color: #555; margin: 16px 0 10px; font-size: 15px; }
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0 20px;
+  line-height: 1.6;
+}
+
+.demo-card {
+  background: #f9f4ff;
+  border: 1px solid #ce93d8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 10px 14px;
+  border: 1px solid #ba68c8;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #9c27b0;
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.15);
+}
+
+.result {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result .label { font-size: 13px; color: #888; }
+.result .value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #7b1fa2;
+  letter-spacing: 1px;
+}
+
+.how-it-works {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.code-block p {
+  margin: 14px 0 4px;
+  font-size: 13px;
+  color: #555;
+}
+
+.code-block code, .code-block pre {
+  display: block;
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: monospace;
+  white-space: pre;
+  overflow-x: auto;
+}

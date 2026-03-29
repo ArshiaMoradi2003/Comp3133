@@ -1,0 +1,48 @@
+<div class="directive-container">
+
+  <h2>⚡ Exercise 3 – Custom Directive</h2>
+  <p class="subtitle">
+    The <code>appInputFormat</code> directive listens to the <strong>blur</strong> event
+    (when you click away) and converts the text to <strong>UPPERCASE</strong>.
+  </p>
+
+  <div class="demo-card">
+    <h3>Try it out</h3>
+
+    <div class="input-group">
+      <label for="demo-input">Type something, then click away:</label>
+      <input
+        id="demo-input"
+        type="text"
+        appInputFormat
+        placeholder="e.g. hello world"
+        (blur)="onBlurCapture($event)"
+      />
+    </div>
+
+    <div class="result" *ngIf="lastValue">
+      <span class="label">Last converted value:</span>
+      <span class="value">{{ lastValue }}</span>
+    </div>
+  </div>
+
+  <div class="how-it-works">
+    <h3>How it works</h3>
+    <div class="code-block">
+      <p><strong>1. Generate directive:</strong></p>
+      <code>ng generate directive input-format</code>
+
+      <p><strong>2. Implement HostListener in input-format.ts:</strong></p>
+      <pre>
+@HostListener('blur')
+onBlur(): void &#123;
+  const val = this.el.nativeElement.value;
+  this.el.nativeElement.value = val.toUpperCase();
+&#125;</pre>
+
+      <p><strong>3. Apply directive as HTML attribute:</strong></p>
+      <code>&lt;input appInputFormat /&gt;</code>
+    </div>
+  </div>
+
+</div>

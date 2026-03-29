@@ -1,0 +1,32 @@
+<!-- Exercise #1: *ngFor structural directive to list heroes -->
+<!-- Exercise #1: (click) event binding to select a hero -->
+<!-- Exercise #1: [class.selected] property binding to highlight selected -->
+<!-- Exercise #2: | removeSpaces custom pipe strips dashes from names -->
+
+<div class="heroes-container">
+  <h2>⚔️ My Heroes</h2>
+
+  <ul class="heroes">
+    <li
+      *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+      <span class="badge">{{ hero.id }}</span>
+      <span class="name">{{ hero.name | removeSpaces }}</span>
+    </li>
+  </ul>
+
+  <!-- Exercise #1: *ngIf structural directive – only shows when a hero is selected -->
+  <div class="hero-detail" *ngIf="selectedHero">
+    <h2>{{ selectedHero.name | removeSpaces | uppercase }} Details</h2>
+    <p><strong>ID:</strong> {{ selectedHero.id }}</p>
+    <div class="edit-row">
+      <label for="hero-name">Hero name:</label>
+      <!-- Exercise #1: [(ngModel)] two-way data binding -->
+      <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name" />
+    </div>
+    <p class="note">✏️ Edit the name above — changes reflect in the list instantly!</p>
+  </div>
+
+  <p class="hint" *ngIf="!selectedHero">👆 Click a hero to see their details</p>
+</div>
